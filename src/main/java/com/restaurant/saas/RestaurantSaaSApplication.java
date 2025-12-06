@@ -1,0 +1,13 @@
+package com.restaurant.saas;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RestaurantSaaSApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(RestaurantSaaSApplication.class, args);
+	}
+
+}
