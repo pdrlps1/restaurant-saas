@@ -32,4 +32,21 @@ public class TenantContext {
         return tenant;
     }
 
+    public static void clear() {
+        String tenant = CURRENT_TENANT.get();
+
+        if (tenant != null){
+            log.debug("Limpando tenant da thread {}: {}",
+                    Thread.currentThread().getName(), tenant);
+        }
+
+        CURRENT_TENANT.remove();
+    }
+
+    private TenantContext() {
+        throw new UnsupportedOperationException(
+                "Esta é uma classe utilitária e não deve ser instanciada"
+        );
+    }
+
 }
