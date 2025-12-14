@@ -30,6 +30,9 @@ spring:
     baseline-on-migrate: true
     schemas: public
     locations: classpath:db/migration
+    url: jdbc:postgresql://localhost:5432/restaurant_saas
+    user: postgres
+    password: postgres
 
 server:
   port: 8080
